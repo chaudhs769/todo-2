@@ -3,7 +3,7 @@
     <h1>Todo List</h1>
     <todo-add v-on:add="addTodo"></todo-add>
     <ul class="todos">
-      <li v-for="(todo, index) in todos" class="todo">
+      <li v-for="(todo, index) in todos" class="todo" :key="index">
         <input
           type="checkbox"
           name=""
