@@ -8,20 +8,19 @@ const
     installFilesEssential = [
         './',
         './manifest.json',
-        './dist/static/css/app.css',
-        './dist/static/js/app.js',
-        './dist/static/js/manifest.js',
-        './dist/static/js/vendor.js',
+        './app/dist/static/css/app.css',
+        './app/dist/static/js/app.js',
+        './app/dist/static/js/manifest.js',
+        './app/dist/static/js/vendor.js',
         // '/js/offlinepage.js',
         // '/images/logo/logo152.png'
     ].concat(offlineURL),
     installFilesDesirable = [
         './favicon.ico',
-        './dist/static/css/app.css.map',
-        './dist/static/js/app.js.map',
-        './dist/static/js/manifest.js.map',
-        './dist/static/js/vendor.js.map',
-        // '/images/hero/power-hi.jpg'
+        './app/dist/static/css/app.css.map',
+        './app/dist/static/js/app.js.map',
+        './app/dist/static/js/manifest.js.map',
+        './app/dist/static/js/vendor.js.map',
     ];
 
 // install static assets
