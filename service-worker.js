@@ -4,23 +4,23 @@
 const
     version = '1.0.0',
     CACHE = version + '::PWAsite',
-    offlineURL = '/',
+    offlineURL = './',
     installFilesEssential = [
-        '/',
-        '/manifest.json',
-        '/dist/static/css/app.css',
-        '/dist/static/js/app.js',
-        '/dist/static/js/manifest.js',
-        '/dist/static/js/vendor.js',
+        './',
+        './manifest.json',
+        './dist/static/css/app.css',
+        './dist/static/js/app.js',
+        './dist/static/js/manifest.js',
+        './dist/static/js/vendor.js',
         // '/js/offlinepage.js',
         // '/images/logo/logo152.png'
     ].concat(offlineURL),
     installFilesDesirable = [
-        '/favicon.ico',
-        '/dist/static/css/app.css.map',
-        '/dist/static/js/app.js.map',
-        '/dist/static/js/manifest.js.map',
-        '/dist/static/js/vendor.js.map',
+        './favicon.ico',
+        './dist/static/css/app.css.map',
+        './dist/static/js/app.js.map',
+        './dist/static/js/manifest.js.map',
+        './dist/static/js/vendor.js.map',
         // '/images/hero/power-hi.jpg'
     ];
 
