@@ -8,19 +8,19 @@ const
     installFilesEssential = [
         '/',
         '/manifest.json',
-        '/dist/static/css/app.b7a1f41b6bd89f87a7051da0e007e391.css',
-        '/dist/static/js/app.e2edcc91e82aeea4735d.js',
-        '/dist/static/js/manifest.eb4aed2eb940b671ff9a.js',
-        '/dist/static/js/vendor.17d770379dd0b1b3199f.js',
+        '/dist/static/css/app.css',
+        '/dist/static/js/app.js',
+        '/dist/static/js/manifest.js',
+        '/dist/static/js/vendor.js',
         // '/js/offlinepage.js',
         // '/images/logo/logo152.png'
     ].concat(offlineURL),
     installFilesDesirable = [
         '/favicon.ico',
-        '/dist/static/css/app.b7a1f41b6bd89f87a7051da0e007e391.map',
-        '/dist/static/js/app.e2edcc91e82aeea4735d.map',
-        '/dist/static/js/manifest.eb4aed2eb940b671ff9a.map',
-        '/dist/static/js/vendor.17d770379dd0b1b3199f.map',
+        '/dist/static/css/app.css.map',
+        '/dist/static/js/app.js.map',
+        '/dist/static/js/manifest.js.map',
+        '/dist/static/js/vendor.js.map',
         // '/images/hero/power-hi.jpg'
     ];
 
