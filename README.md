@@ -10,4 +10,4 @@ a pwa todolist base on vue2, Express, MongoDB
 
 前端源码目录：app
 
-后端源码目录：Server
+后端源码目录：server
