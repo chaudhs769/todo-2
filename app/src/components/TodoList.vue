@@ -20,7 +20,7 @@
       </li>
     </ul>
     <div>
-      <p v-show="todos.length === 0">All is done</p>
+      <p v-show="todos.length === 0">Have No todos</p>
       <p v-show="todos.length !== 0">
           <strong>{{todos.length}}</strong> task to do,
           {{completedCounts}} have done.
@@ -38,13 +38,15 @@ export default {
       TodoAdd
   },
   data: ()=>({
-      todos: [{
-          text: 'todo1',
-          isCompleted: false
-      },{
-          text: 'todo2',
-          isCompleted: false
-      }]
+      todos: [
+    //     {
+    //       text: 'todo1',
+    //       isCompleted: false
+    //   },{
+    //       text: 'todo2',
+    //       isCompleted: false
+    //   }
+      ]
   }),
   methods:{
       completed(index){
