@@ -1,11 +1,11 @@
 <template>
   <div id="addTodo">
-      <input 
+      <input
         type="text"
         name=""
         class="input"
         value=""
-        v-model="todo"
+        v-model="todoText"
         @keyup.enter="addTodo"
       >
       <button
@@ -20,23 +20,25 @@
 
 <script>
 export default {
-  name: 'addTodo',
-  data: () => ({
-      todo: ''
-  }),
-  methods:{
-      addTodo(){
-          if(this.todo){
-              this.$emit('add', this.todo);
-              this.todo = ''
-          }
+  name: "addTodo",
+  data() {
+    return {
+      todoText: ""
+    };
+  },
+  methods: {
+    addTodo() {
+      if (this.todoText) {
+        this.$emit("add", this.todoText);
+        this.todoText = "";
       }
+    }
   }
-}
+};
 </script>
 
 <style scoped>
-.input{
-    min-width: 200px;
+.input {
+  min-width: 200px;
 }
 </style>
