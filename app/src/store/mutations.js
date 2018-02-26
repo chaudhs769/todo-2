@@ -1,8 +1,6 @@
-import IndexedDB from '../libs/IndexedDB'
-
 export default {
     // 将IndexedDB中数据写入vuex
-    getData (state, data) {
+    importDataFromIdxDB (state, data) {
         state[data.name] = data.result;
     },
     // 设置当前用户
@@ -49,6 +47,10 @@ export default {
     // 删除待办事件
     deleteTodo (state, index) {
         state.todo.todoList.splice(index, 1);
+    },
+    checkTodo (state, index){
+        let list = state.todo.todoList;
+        list[index].isCompleted = !list[index].isCompleted;
     },
     // 改变待办事件状态
     changeTodoState (state, time) {

@@ -9,11 +9,11 @@
           name=""
           value=""
           :checked="todo.isCompleted"
-          @click="completed(index)"
+          @click="checkTodo(index)"
         >
         <span
           :class="todo.isCompleted ? 'completed' : ''"
-          @click="completed(index)"
+          @click="checkTodo(index)"
         >
           <em>{{ index + 1 }}.</em>{{ todo.text }}
         </span>
@@ -31,61 +31,54 @@
 </template>
 
 <script>
-import TodoAdd from './TodoAdd.vue';
+import TodoAdd from "./TodoAdd.vue";
 export default {
-  name: 'TodoList',
+  name: "TodoList",
   components: {
-      TodoAdd
+    TodoAdd
   },
-  data: ()=>({
-      todos: [
-    //     {
-    //       text: 'todo1',
-    //       isCompleted: false
-    //   },{
-    //       text: 'todo2',
-    //       isCompleted: false
-    //   }
-      ]
-  }),
-  methods:{
-      completed(index){
-          this.todos[index].isCompleted = !this.todos[index].isCompleted;
-      },
-      addTodo(todo){
-          this.todos.push({
-              text: todo,
-              isCompleted: false
-          })
-      }
+  data() {
+    return {};
+  },
+  methods: {
+    checkTodo(index) {
+      this.$store.dispatch("checkTodo", index);
+    },
+    addTodo(todoText) {
+      this.$store.dispatch("addTodo", todoText);
+    }
   },
   computed: {
-      completedCounts(){
-          return this.todos.filter(item => item.isCompleted).length;
-      },
-      notCompletedCounts(){
-          return this.todos.filter(item => !item.isCompleted).length;
-      }
+    completedCounts() {
+      return this.todos.filter(item => item.isCompleted).length;
+    },
+    notCompletedCounts() {
+      return this.todos.filter(item => !item.isCompleted).length;
+    },
+    todos: function() {
+      // 使用state中的todolist代替本地todolist
+      return this.$store.state.todo.todoList;
+    }
   }
-}
+};
 </script>
 
 <style scoped>
-#todoList{
-    margin: 0 auto;
-    max-width: 350px;
+#todoList {
+  margin: 0 auto;
+  max-width: 350px;
 }
 
-.todos li{
-    list-style: none;
+.todos li {
+  list-style: none;
 }
 
-.todo{
-    text-align: left;
-    cursor: pointer;
+.todo {
+  text-align: left;
+  cursor: pointer;
 }
 
-.completed{
-    text-decoration: line-through;
+.completed {
+  text-decoration: line-through;
 }
 </style>
